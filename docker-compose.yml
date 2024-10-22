@@ -11,9 +11,9 @@ services:
     volumes:
       - ./app:/app
     command: >
-      sh -c "python manage.py runserver 0.0.0.0:8000"
+      sh -c "python manage.py runserver 127.0.0.1:8000"
     environment:
-      - DB_HOST=db
+      - DB_HOST=localhost
       - DB_NAME=devdb
       - DB_USER=devuser
       - DB_PASS=changeme
